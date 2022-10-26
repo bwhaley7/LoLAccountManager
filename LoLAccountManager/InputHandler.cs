@@ -54,6 +54,10 @@ namespace LoLAccountManager
                     ShowWindow(hWnd, 3);
                     SetForegroundWindow(hWnd);
                 }
+                else
+                {
+                    MessageBox.Show("RiotClientUx process was not found. Please load client.", "Client not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
