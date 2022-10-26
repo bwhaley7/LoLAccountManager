@@ -19,7 +19,7 @@ namespace LoLAccountManager
             InitializeComponent();
         }
 
-        private void accountView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void accountView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             InputHandler ih = new InputHandler();
             ih.FocusProcess();

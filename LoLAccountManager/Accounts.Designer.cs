@@ -29,51 +29,51 @@ namespace LoLAccountManager
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.accountView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.accountName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountPass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginSend = new System.Windows.Forms.DataGridViewButtonColumn();
             this.addAccount = new Guna.UI2.WinForms.Guna2Panel();
+            this.saveAccountsButton = new Guna.UI2.WinForms.Guna2Button();
+            this.loadFileButton = new Guna.UI2.WinForms.Guna2Button();
             this.passwordText = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.usernameLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.usernameText = new Guna.UI2.WinForms.Guna2TextBox();
             this.addAccountButton = new Guna.UI2.WinForms.Guna2Button();
-            this.loadFileButton = new Guna.UI2.WinForms.Guna2Button();
-            this.saveAccountsButton = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.accountView)).BeginInit();
             this.addAccount.SuspendLayout();
             this.SuspendLayout();
             // 
             // accountView
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.accountView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(14)))), ((int)(((byte)(24)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.accountView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.accountView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(14)))), ((int)(((byte)(24)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.accountView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.accountView.ColumnHeadersHeight = 15;
             this.accountView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.accountView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.accountName,
             this.accountPass,
             this.loginSend});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.accountView.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.accountView.DefaultCellStyle = dataGridViewCellStyle3;
             this.accountView.Dock = System.Windows.Forms.DockStyle.Top;
             this.accountView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.accountView.Location = new System.Drawing.Point(0, 0);
@@ -102,7 +102,7 @@ namespace LoLAccountManager
             this.accountView.ThemeStyle.RowsStyle.Height = 22;
             this.accountView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.accountView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.accountView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.accountView_CellContentClick);
+            this.accountView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.accountView_CellContentDoubleClick);
             // 
             // accountName
             // 
@@ -134,6 +134,36 @@ namespace LoLAccountManager
             this.addAccount.Name = "addAccount";
             this.addAccount.Size = new System.Drawing.Size(600, 202);
             this.addAccount.TabIndex = 1;
+            // 
+            // saveAccountsButton
+            // 
+            this.saveAccountsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.saveAccountsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.saveAccountsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.saveAccountsButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.saveAccountsButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.saveAccountsButton.ForeColor = System.Drawing.Color.White;
+            this.saveAccountsButton.Location = new System.Drawing.Point(137, 109);
+            this.saveAccountsButton.Name = "saveAccountsButton";
+            this.saveAccountsButton.Size = new System.Drawing.Size(119, 30);
+            this.saveAccountsButton.TabIndex = 7;
+            this.saveAccountsButton.Text = "Save";
+            this.saveAccountsButton.Click += new System.EventHandler(this.saveAccountsButton_Click);
+            // 
+            // loadFileButton
+            // 
+            this.loadFileButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.loadFileButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.loadFileButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.loadFileButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.loadFileButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.loadFileButton.ForeColor = System.Drawing.Color.White;
+            this.loadFileButton.Location = new System.Drawing.Point(262, 109);
+            this.loadFileButton.Name = "loadFileButton";
+            this.loadFileButton.Size = new System.Drawing.Size(119, 30);
+            this.loadFileButton.TabIndex = 6;
+            this.loadFileButton.Text = "Load";
+            this.loadFileButton.Click += new System.EventHandler(this.loadFileButton_Click);
             // 
             // passwordText
             // 
@@ -209,36 +239,6 @@ namespace LoLAccountManager
             this.addAccountButton.TabIndex = 0;
             this.addAccountButton.Text = "Add Acount";
             this.addAccountButton.Click += new System.EventHandler(this.addAccountButton_Click);
-            // 
-            // loadFileButton
-            // 
-            this.loadFileButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.loadFileButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.loadFileButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.loadFileButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.loadFileButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.loadFileButton.ForeColor = System.Drawing.Color.White;
-            this.loadFileButton.Location = new System.Drawing.Point(262, 109);
-            this.loadFileButton.Name = "loadFileButton";
-            this.loadFileButton.Size = new System.Drawing.Size(119, 30);
-            this.loadFileButton.TabIndex = 6;
-            this.loadFileButton.Text = "Load";
-            this.loadFileButton.Click += new System.EventHandler(this.loadFileButton_Click);
-            // 
-            // saveAccountsButton
-            // 
-            this.saveAccountsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.saveAccountsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.saveAccountsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.saveAccountsButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.saveAccountsButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.saveAccountsButton.ForeColor = System.Drawing.Color.White;
-            this.saveAccountsButton.Location = new System.Drawing.Point(137, 109);
-            this.saveAccountsButton.Name = "saveAccountsButton";
-            this.saveAccountsButton.Size = new System.Drawing.Size(119, 30);
-            this.saveAccountsButton.TabIndex = 7;
-            this.saveAccountsButton.Text = "Save";
-            this.saveAccountsButton.Click += new System.EventHandler(this.saveAccountsButton_Click);
             // 
             // Accounts
             // 
