@@ -38,7 +38,7 @@ namespace LoLAccountManager
             if (procs.Length == 0)
                 Process.Start(@"E:\Riot Games\League of Legends\LeagueClient.exe");
             else
-                MessageBox.Show("LeagueClient process already running!", "Cap", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("LeagueClient process already running!", "Process already running", MessageBoxButtons.OK,MessageBoxIcon.Warning);
         }
     }
 }
