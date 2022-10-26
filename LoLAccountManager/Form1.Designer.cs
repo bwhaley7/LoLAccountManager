@@ -33,6 +33,7 @@ namespace LoLAccountManager
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.loadClientButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.dashButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -41,7 +42,6 @@ namespace LoLAccountManager
             this.exit_Button = new Guna.UI2.WinForms.Guna2CircleButton();
             this.switchViewPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.loadClientButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.toolbarPanel.SuspendLayout();
@@ -65,6 +65,28 @@ namespace LoLAccountManager
             this.guna2Panel1.Size = new System.Drawing.Size(200, 450);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // loadClientButton
+            // 
+            this.loadClientButton.AutoRoundedCorners = true;
+            this.loadClientButton.BackColor = System.Drawing.Color.Transparent;
+            this.loadClientButton.BorderRadius = 21;
+            this.loadClientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.loadClientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.loadClientButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.loadClientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.loadClientButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(14)))), ((int)(((byte)(24)))));
+            this.loadClientButton.Font = new System.Drawing.Font("Franklin Gothic Demi", 9F);
+            this.loadClientButton.ForeColor = System.Drawing.Color.White;
+            this.loadClientButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.loadClientButton.Image = ((System.Drawing.Image)(resources.GetObject("loadClientButton.Image")));
+            this.loadClientButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.loadClientButton.Location = new System.Drawing.Point(11, 393);
+            this.loadClientButton.Name = "loadClientButton";
+            this.loadClientButton.Size = new System.Drawing.Size(180, 45);
+            this.loadClientButton.TabIndex = 4;
+            this.loadClientButton.Text = "Load Client";
+            this.loadClientButton.Click += new System.EventHandler(this.loadClientButton_Click);
+            // 
             // guna2Button1
             // 
             this.guna2Button1.AutoRoundedCorners = true;
@@ -82,7 +104,7 @@ namespace LoLAccountManager
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(144)))), ((int)(((byte)(59)))));
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(9, 152);
+            this.guna2Button1.Location = new System.Drawing.Point(9, 128);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(182, 45);
             this.guna2Button1.TabIndex = 3;
@@ -105,7 +127,7 @@ namespace LoLAccountManager
             this.dashButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(144)))), ((int)(((byte)(59)))));
             this.dashButton.Image = ((System.Drawing.Image)(resources.GetObject("dashButton.Image")));
             this.dashButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.dashButton.Location = new System.Drawing.Point(9, 101);
+            this.dashButton.Location = new System.Drawing.Point(9, 77);
             this.dashButton.Name = "dashButton";
             this.dashButton.Size = new System.Drawing.Size(182, 45);
             this.dashButton.TabIndex = 2;
@@ -181,28 +203,6 @@ namespace LoLAccountManager
             this.guna2DragControl1.TargetControl = this.toolbarPanel;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // loadClientButton
-            // 
-            this.loadClientButton.AutoRoundedCorners = true;
-            this.loadClientButton.BackColor = System.Drawing.Color.Transparent;
-            this.loadClientButton.BorderRadius = 21;
-            this.loadClientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.loadClientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.loadClientButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.loadClientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.loadClientButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(14)))), ((int)(((byte)(24)))));
-            this.loadClientButton.Font = new System.Drawing.Font("Franklin Gothic Demi", 9F);
-            this.loadClientButton.ForeColor = System.Drawing.Color.White;
-            this.loadClientButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.loadClientButton.Image = ((System.Drawing.Image)(resources.GetObject("loadClientButton.Image")));
-            this.loadClientButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.loadClientButton.Location = new System.Drawing.Point(11, 393);
-            this.loadClientButton.Name = "loadClientButton";
-            this.loadClientButton.Size = new System.Drawing.Size(180, 45);
-            this.loadClientButton.TabIndex = 4;
-            this.loadClientButton.Text = "Load Client";
-            this.loadClientButton.Click += new System.EventHandler(this.loadClientButton_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +215,7 @@ namespace LoLAccountManager
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();

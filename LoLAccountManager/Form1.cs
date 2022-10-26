@@ -13,9 +13,16 @@ namespace LoLAccountManager
 {
     public partial class Form1 : Form
     {
+        Accounts acView;
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            acView = new Accounts();
+            acView.loadAccounts();
         }
 
         private void exit_Button_Click(object sender, EventArgs e)
@@ -25,7 +32,6 @@ namespace LoLAccountManager
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Accounts acView = new Accounts();
             acView.TopLevel = false;
             switchViewPanel.Controls.Add(acView);
             acView.BringToFront();

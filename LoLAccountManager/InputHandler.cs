@@ -26,7 +26,7 @@ namespace LoLAccountManager
 
         public void moveMouseToUser()
         {
-            Cursor.Position = new Point(120,550);
+            Cursor.Position = new Point(141,255);
             doMouseClick();
         }
 
@@ -37,9 +37,12 @@ namespace LoLAccountManager
             mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
         }
 
-        public void enterUsername(string user)
+        public void doLogin(string user, string pass)
         {
             SendKeys.Send(user);
+            SendKeys.Send("{Tab}");
+            SendKeys.Send(pass);
+            SendKeys.Send("{Enter}");
         }
 
         public void FocusProcess()
