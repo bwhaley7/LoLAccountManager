@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,9 +22,11 @@ namespace LoLAccountManager
         private void accountView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             InputHandler ih = new InputHandler();
-            ih.moveMouseToUser();
-            //Need to fix mouse event - crashing
-            ih.enterUsername(accountView.Rows[e.RowIndex].Cells[0].Value.ToString());
+            ih.FocusProcess();
+            Thread.Sleep(1000);
+            //ih.moveMouseToUser();
+            //Thread.Sleep(500);
+            //ih.enterUsername(accountView.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
 
         private void usernameLabel_Click(object sender, EventArgs e)
