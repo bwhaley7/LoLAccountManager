@@ -34,7 +34,7 @@ namespace LoLAccountManager
 
         private void loadClientButton_Click(object sender, EventArgs e)
         {
-            Process[] procs = Process.GetProcessesByName("RiotClientServices.exe");
+            Process[] procs = Process.GetProcessesByName("RiotClientServices");
             if (procs.Length == 0)
                 Process.Start(@"E:\Riot Games\League of Legends\LeagueClient.exe");
             else
