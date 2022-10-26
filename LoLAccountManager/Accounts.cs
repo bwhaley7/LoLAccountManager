@@ -24,44 +24,23 @@ namespace LoLAccountManager
             InputHandler ih = new InputHandler();
             ih.FocusProcess();
             Thread.Sleep(1000);
-            //ih.moveMouseToUser();
-            //Thread.Sleep(500);
-            //ih.enterUsername(accountView.Rows[e.RowIndex].Cells[0].Value.ToString());
-        }
-
-        private void usernameLabel_Click(object sender, EventArgs e)
-        {
-
+            ih.moveMouseToUser();
+            Thread.Sleep(1000);
+            ih.doLogin(accountView.Rows[e.RowIndex].Cells[0].Value.ToString(), accountView.Rows[e.RowIndex].Cells[1].Value.ToString());
         }
 
         private void addAccountButton_Click(object sender, EventArgs e)
         {
-            accountView.Rows.Add(usernameText.Text,passwordText.Text);
-        }
-
-        private void saveAccountsButton_Click(object sender, EventArgs e)
-        {
-            string filename = @"D:\LoLAccountManager\accounts.txt";
-            using (System.IO.StreamWriter writer = new System.IO.StreamWriter(filename))
-            {
-                int row = accountView.Rows.Count;
-                int cells = accountView.Rows[1].Cells.Count;
-
-                for (int i = 0; i < row; i++)
-                {
-                    for (int j = 0; j < cells; j += 3)
-                    {
-                        if (accountView.Rows[i].Cells[j].Value != null)
-                        {
-                            writer.WriteLine(accountView.Rows[i].Cells[j].Value + ":" + accountView.Rows[i].Cells[j + 1].Value);
-                        }
-                    }
-                }
-
-            }
+            AddAccount ac = new AddAccount();
+            ac.Show();
         }
 
         private void loadFileButton_Click(object sender, EventArgs e)
+        {
+            loadAccounts();
+        }
+
+        public void loadAccounts()
         {
             string filename = @"D:\LoLAccountManager\accounts.txt";
             string str, user, pass = "";
@@ -74,14 +53,14 @@ namespace LoLAccountManager
                     str = reader.ReadLine();
                     user = str.Split(':')[0];
                     pass = str.Split(':')[1];
-                    for(int row = 0; row < accountView.Rows.Count; row++)
+                    for (int row = 0; row < accountView.Rows.Count; row++)
                     {
                         if (accountView.Rows[row].Cells[0].Value != null && accountView.Rows[row].Cells[0].Value.Equals(user))
                         {
                             dupe = true;
                         }
                     }
-                    if(!dupe)
+                    if (!dupe)
                         accountView.Rows.Add(user, pass);
 
                 }
