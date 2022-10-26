@@ -45,20 +45,20 @@ namespace LoLAccountManager
         public void FocusProcess()
         {
             IntPtr hWnd;
+            bool found = false;
             Process[] procRun = Process.GetProcesses();
             foreach (Process pr in procRun)
             {
                 if(pr.ProcessName == "RiotClientUx")
                 {
+                    found = true;
                     hWnd = pr.MainWindowHandle;
                     ShowWindow(hWnd, 3);
                     SetForegroundWindow(hWnd);
                 }
-                else
-                {
-                    MessageBox.Show("RiotClientUx process was not found. Please load client.", "Client not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
             }
+            if(!found)
+                MessageBox.Show("RiotClientUx process was not found. Please load client.", "Client not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
