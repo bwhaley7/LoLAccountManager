@@ -22,7 +22,7 @@ namespace LoLAccountManager
         private void Form1_Load(object sender, EventArgs e)
         {
             acView = new Accounts();
-            acView.loadAccounts();
+            acView.loadTable();
         }
 
         private void exit_Button_Click(object sender, EventArgs e)

@@ -20,11 +20,10 @@ namespace LoLAccountManager
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            string filename = @"D:\LoLAccountManager\accounts.txt";
-            using (System.IO.StreamWriter writer = File.AppendText(filename))
-            {
-                writer.WriteLine(userText.Text + ":" + passText.Text);
-            }
+            AccountManager am = new AccountManager();
+            am.loadAccounts();
+            am.addAccount(userText.Text, passText.Text, "NA");
+            am.saveToFile();
         }
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
