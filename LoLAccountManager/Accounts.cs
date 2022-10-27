@@ -14,6 +14,9 @@ namespace LoLAccountManager
 {
     public partial class Accounts : Form
     {
+        InputHandler ih = new InputHandler();
+        RequestHandler rh = new RequestHandler();
+        public AccountManager am = new AccountManager();
         public Accounts()
         {
             InitializeComponent();
@@ -21,7 +24,6 @@ namespace LoLAccountManager
 
         private void accountView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            InputHandler ih = new InputHandler();
             ih.FocusProcess();
             Thread.Sleep(1000);
             ih.moveMouseToUser();
@@ -37,34 +39,41 @@ namespace LoLAccountManager
 
         private void loadFileButton_Click(object sender, EventArgs e)
         {
-            loadAccounts();
+            loadTable();
         }
 
-        public void loadAccounts()
+        public void loadTable()
         {
-            string filename = @"D:\LoLAccountManager\accounts.txt";
-            string str, user, pass = "";
-            bool dupe = false;
-            using (System.IO.StreamReader reader = new System.IO.StreamReader(filename))
+            am.loadAccounts();
+            bool dupe;
+            if (am.Accounts != null)
             {
-                while (!reader.EndOfStream)
+                foreach (Account ac in am.Accounts)
                 {
                     dupe = false;
-                    str = reader.ReadLine();
-                    user = str.Split(':')[0];
-                    pass = str.Split(':')[1];
                     for (int row = 0; row < accountView.Rows.Count; row++)
                     {
-                        if (accountView.Rows[row].Cells[0].Value != null && accountView.Rows[row].Cells[0].Value.Equals(user))
+                        if (accountView.Rows[row].Cells[0].Value != null && accountView.Rows[row].Cells[0].Value.Equals(ac.user))
                         {
                             dupe = true;
                         }
                     }
                     if (!dupe)
-                        accountView.Rows.Add(user, pass);
-
+                        accountView.Rows.Add(ac.user, ac.pass, "NA", "NA");
                 }
             }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            am.loadAccounts();
+            am.saveToFile();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            am.loadAccounts();
+            am.importAccounts();
         }
     }
 }

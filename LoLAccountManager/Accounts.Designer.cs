@@ -34,11 +34,16 @@ namespace LoLAccountManager
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.accountView = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.accountName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addAccount = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.loadFileButton = new Guna.UI2.WinForms.Guna2Button();
             this.addAccountButton = new Guna.UI2.WinForms.Guna2Button();
+            this.accountName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.summonerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rank = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.accountView)).BeginInit();
             this.addAccount.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +69,9 @@ namespace LoLAccountManager
             this.accountView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.accountView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.accountName,
-            this.passwordColumn});
+            this.passwordColumn,
+            this.summonerName,
+            this.rank});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(3)))), ((int)(((byte)(24)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Demi", 8.25F);
@@ -73,7 +80,7 @@ namespace LoLAccountManager
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.accountView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.accountView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.accountView.Dock = System.Windows.Forms.DockStyle.Top;
             this.accountView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(3)))), ((int)(((byte)(24)))));
             this.accountView.Location = new System.Drawing.Point(0, 0);
             this.accountView.Name = "accountView";
@@ -86,7 +93,7 @@ namespace LoLAccountManager
             this.accountView.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.accountView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(3)))), ((int)(((byte)(24)))));
             this.accountView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Franklin Gothic Demi", 8.25F);
-            this.accountView.Size = new System.Drawing.Size(600, 422);
+            this.accountView.Size = new System.Drawing.Size(600, 385);
             this.accountView.TabIndex = 0;
             this.accountView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(3)))), ((int)(((byte)(24)))));
             this.accountView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -111,21 +118,12 @@ namespace LoLAccountManager
             this.accountView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.accountView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.accountView_CellContentDoubleClick);
             // 
-            // accountName
-            // 
-            this.accountName.HeaderText = "Account Name";
-            this.accountName.Name = "accountName";
-            // 
-            // passwordColumn
-            // 
-            this.passwordColumn.HeaderText = "Password";
-            this.passwordColumn.Name = "passwordColumn";
-            this.passwordColumn.ReadOnly = true;
-            this.passwordColumn.Visible = false;
-            // 
             // addAccount
             // 
             this.addAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(3)))), ((int)(((byte)(24)))));
+            this.addAccount.Controls.Add(this.guna2Button2);
+            this.addAccount.Controls.Add(this.guna2Button1);
+            this.addAccount.Controls.Add(this.guna2ImageButton1);
             this.addAccount.Controls.Add(this.loadFileButton);
             this.addAccount.Controls.Add(this.addAccountButton);
             this.addAccount.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -133,6 +131,54 @@ namespace LoLAccountManager
             this.addAccount.Name = "addAccount";
             this.addAccount.Size = new System.Drawing.Size(600, 38);
             this.addAccount.TabIndex = 1;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(144)))), ((int)(((byte)(59)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(221, 5);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(64, 30);
+            this.guna2Button2.TabIndex = 8;
+            this.guna2Button2.Text = "Import";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(144)))), ((int)(((byte)(59)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(161, 5);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(54, 30);
+            this.guna2Button1.TabIndex = 7;
+            this.guna2Button1.Text = "Save";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Image = global::LoLAccountManager.Properties.Resources.rotate;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(23, 23);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(533, 7);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(23, 23);
+            this.guna2ImageButton1.TabIndex = 2;
+            this.guna2ImageButton1.UseTransparentBackground = true;
             // 
             // loadFileButton
             // 
@@ -143,9 +189,9 @@ namespace LoLAccountManager
             this.loadFileButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(144)))), ((int)(((byte)(59)))));
             this.loadFileButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.loadFileButton.ForeColor = System.Drawing.Color.White;
-            this.loadFileButton.Location = new System.Drawing.Point(128, 5);
+            this.loadFileButton.Location = new System.Drawing.Point(101, 5);
             this.loadFileButton.Name = "loadFileButton";
-            this.loadFileButton.Size = new System.Drawing.Size(119, 30);
+            this.loadFileButton.Size = new System.Drawing.Size(54, 30);
             this.loadFileButton.TabIndex = 6;
             this.loadFileButton.Text = "Load";
             this.loadFileButton.Click += new System.EventHandler(this.loadFileButton_Click);
@@ -161,10 +207,32 @@ namespace LoLAccountManager
             this.addAccountButton.ForeColor = System.Drawing.Color.White;
             this.addAccountButton.Location = new System.Drawing.Point(3, 5);
             this.addAccountButton.Name = "addAccountButton";
-            this.addAccountButton.Size = new System.Drawing.Size(119, 30);
+            this.addAccountButton.Size = new System.Drawing.Size(92, 30);
             this.addAccountButton.TabIndex = 0;
             this.addAccountButton.Text = "Add Acount";
             this.addAccountButton.Click += new System.EventHandler(this.addAccountButton_Click);
+            // 
+            // accountName
+            // 
+            this.accountName.HeaderText = "Account Name";
+            this.accountName.Name = "accountName";
+            // 
+            // passwordColumn
+            // 
+            this.passwordColumn.HeaderText = "Password";
+            this.passwordColumn.Name = "passwordColumn";
+            this.passwordColumn.ReadOnly = true;
+            this.passwordColumn.Visible = false;
+            // 
+            // summonerName
+            // 
+            this.summonerName.HeaderText = "Summoner Name";
+            this.summonerName.Name = "summonerName";
+            // 
+            // rank
+            // 
+            this.rank.HeaderText = "Rank";
+            this.rank.Name = "rank";
             // 
             // Accounts
             // 
@@ -188,7 +256,12 @@ namespace LoLAccountManager
         private Guna.UI2.WinForms.Guna2Panel addAccount;
         private Guna.UI2.WinForms.Guna2Button addAccountButton;
         private Guna.UI2.WinForms.Guna2Button loadFileButton;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn accountName;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn summonerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rank;
     }
 }
