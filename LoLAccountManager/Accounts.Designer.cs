@@ -140,6 +140,7 @@ namespace LoLAccountManager
             this.loadFileButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.loadFileButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.loadFileButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.loadFileButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(144)))), ((int)(((byte)(59)))));
             this.loadFileButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.loadFileButton.ForeColor = System.Drawing.Color.White;
             this.loadFileButton.Location = new System.Drawing.Point(128, 5);
@@ -155,6 +156,7 @@ namespace LoLAccountManager
             this.addAccountButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.addAccountButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.addAccountButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addAccountButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(144)))), ((int)(((byte)(59)))));
             this.addAccountButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.addAccountButton.ForeColor = System.Drawing.Color.White;
             this.addAccountButton.Location = new System.Drawing.Point(3, 5);
